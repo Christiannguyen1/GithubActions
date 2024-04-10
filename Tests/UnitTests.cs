@@ -7,7 +7,7 @@ namespace GithubActionsLab
     public class Math
     {
         [Test]
-        public void Add_Valid()
+        public void Add_ValidNguyen()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -15,7 +15,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Add_InvalidNguyen()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -23,7 +23,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Add_Null()
+        public void Add_NullNguyen()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
@@ -33,7 +33,7 @@ namespace GithubActionsLab
         // Implement 3 tests per operation, following a similar pattern as above
 
         [Test]
-        public void Subtract_Valid()
+        public void Subtract_ValidNguyen()
         {
             Assert.AreEqual(1, Program.Subtract("1", "2"));
             Assert.AreEqual(0, Program.Subtract("2", "2"));
@@ -41,7 +41,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Multiply_Valid()
+        public void Multiply_ValidNguyen()
         {
             Assert.AreEqual(1, Program.Multiply("1", "1"));
             Assert.AreEqual(0, Program.Multiply("1", "0"));
@@ -49,7 +49,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Divide_Valid()
+        public void Divide_ValidNguyen()
         {
             Assert.AreEqual(1, Program.Divide("1", "1"));
             Assert.AreEqual(0, Program.Divide("0", "1"));
@@ -57,7 +57,7 @@ namespace GithubActionsLab
         }
 
         [Test]
-        public void Power_Valid()
+        public void Power_ValidNguyen()
         {
             Assert.AreEqual(1, Program.Power("1", "1"));
             Assert.AreEqual(1, Program.Power("10", "0"));
