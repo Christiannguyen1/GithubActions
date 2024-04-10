@@ -31,5 +31,39 @@ namespace GithubActionsLab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+
+        [Test]
+        public void Subtract_Valid()
+        {
+            Assert.AreEqual(1, Program.Subtract("1", "2"));
+            Assert.AreEqual(0, Program.Subtract("2", "2"));
+            Assert.AreEqual(10, Program.Subtract("15", "5"));
+        }
+
+        [Test]
+        public void Multiply_Valid()
+        {
+            Assert.AreEqual(1, Program.Multiply("1", "1"));
+            Assert.AreEqual(0, Program.Multiply("1", "0"));
+            Assert.AreEqual(15, Program.Multiply("5", "3"));
+        }
+
+        [Test]
+        public void Divide_Valid()
+        {
+            Assert.AreEqual(1, Program.Divide("1", "1"));
+            Assert.AreEqual(0, Program.Divide("0", "1"));
+            Assert.AreEqual(5, Program.Divide("10", "2"));
+        }
+
+        [Test]
+        public void Power_Valid()
+        {
+            Assert.AreEqual(1, Program.Power("1", "1"));
+            Assert.AreEqual(1, Program.Power("10", "0"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
+        }
+
+
     }
 }
